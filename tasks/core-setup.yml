@@ -1,0 +1,91 @@
+- name: Install System Packages 1 (build-essential, cmake, pkg-config, software-properties-common)
+  become: true
+  apt:
+    name: ["build-essential", "cmake", "pkg-config", "software-properties-common"]
+  tags:
+    - install
+    - neovim
+    - core
+
+- name: Install System Packages 2 (lua, unzip, libtool, libtool-bin, gettext)
+  become: true
+  apt:
+    name: [ "lua5.1", "unzip", "libtool", "libtool-bin", "gettext"]
+  tags:
+    - install
+    - neovim
+    - core
+
+- name: Install System Packages 3 ()
+  become: true
+  apt:
+    name: [ "curl", "htop", "lsof", "silversearcher-ag", "bat", "python3-pip","wget", "file","locate", "net-tools", "task-spooler"]
+  tags:
+    - install
+    - core
+    
+- name: Install System Packages Screen (Imagemagick, feh , sxiv, maim, scrot)
+  become: true
+  apt:
+    name: [ "imagemagick", "feh", "sxiv", "maim", "scrot"]
+  tags:
+    - install
+    - core
+
+- name: Install Decrompres packages (unrar,unzip,p7zip)
+  become: true
+  apt:
+    name: [ "unrar", "unzip", "p7zip"]
+  tags:
+    - install
+    - core
+
+
+- name: Install Development Packages
+  become: true
+  apt:
+    name: [ "ninja-build", "python3-pip", "git","tig","jq","tmux", "pandoc"]
+  tags:
+    - install
+    - core
+
+- name: Install xorg and Display Manager and Compositor
+  become: true
+  apt:
+    name: [ "xorg","lightdm", "compton", "dunst"]
+  tags:
+    - install
+    - core
+
+- name: Install WM awesome and utilities
+  become: true
+  apt:
+    name: [ "awesome", "lxappearance", "suckless-tools", "rofi", "j4-dmenu-desktop", "wmctrl", "xsel", "dunst", "libnotify-bin", "surfraw", "i3lock", "vlc", "gnome-mpv"]
+  tags:
+    - install
+    - core
+
+
+- name: Install Sound packages
+  become: true
+  apt:
+    name: [ "pulseaudio", "pavucontrol", "pulsemixer", "volumeicon-alsa"]
+  tags:
+    - install
+    - core
+
+- name: Install MPD packages
+  become: true
+  apt:
+    name: [ "mpd", "mpc", "ncmpcpp"]
+  tags:
+    - install
+    - core
+
+- name: Install Remote work packages
+  become: true
+  apt:
+    name: [ "openvpn", " remmina"]
+  tags:
+    - install
+    - core

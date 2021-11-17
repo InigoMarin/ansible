@@ -1,0 +1,14 @@
+---
+- name: Setup LXD Developer container
+  hosts: all
+  pre_tasks:
+    - name: Update apt
+      apt:
+        force_apt_get: true
+        update_cache: true
+        state: present
+  tasks:
+    - include: tasks/core-setup.yml
+    - include: tasks/git-setup.yml
+    - include: tasks/node-setup.yml
+    - include: tasks/java.yml
