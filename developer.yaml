@@ -9,6 +9,7 @@
         state: present
   tasks:
     - include: tasks/core-setup.yml
+    - include: tasks/brave.yml
     - include: tasks/git-setup.yml
     - include: tasks/node-setup.yml
     - include: tasks/java.yml
