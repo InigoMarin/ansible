@@ -1,0 +1,40 @@
+- name: Install xorg and Display Manager and Compositor (xorg, lightdm, compton, dunst)
+  become: true
+  apt:
+    name: [ "xorg","lightdm", "compton", "dunst"]
+  tags:
+    - install
+    - core
+
+- name: Install WM awesome and utilities (awesome)
+  become: true
+  apt:
+    name: [ "awesome", "lxappearance", "suckless-tools", "rofi", "j4-dmenu-desktop", "wmctrl", "xsel", "libnotify-bin", "surfraw", "i3lock", "vlc", "gnome-mpv"]
+  tags:
+    - install
+    - core
+
+- name: Install Sound packages (pulseaudio, pavucontrol,pulsemixer,volumeicon-alsa)
+  become: true
+  apt:
+    name: [ "pulseaudio", "pavucontrol", "pulsemixer", "volumeicon-alsa"]
+  tags:
+    - install
+    - core
+
+
+- name: Install System Packages Screen (Imagemagick, feh , sxiv, maim, scrot)
+  become: true
+  apt:
+    name: [ "imagemagick", "feh", "sxiv", "maim", "scrot"]
+  tags:
+    - install
+    - core
+
+- name: Install Remote work packages (openvpn, remmina)
+  become: true
+  apt:
+    name: [ "openvpn", " remmina"]
+  tags:
+    - install
+    - core

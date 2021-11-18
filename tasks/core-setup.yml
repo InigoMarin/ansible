@@ -24,14 +24,6 @@
     - install
     - core
     
-- name: Install System Packages Screen (Imagemagick, feh , sxiv, maim, scrot)
-  become: true
-  apt:
-    name: [ "imagemagick", "feh", "sxiv", "maim", "scrot"]
-  tags:
-    - install
-    - core
-
 - name: Install Decrompres packages (unrar,unzip,p7zip)
   become: true
   apt:
@@ -44,48 +36,8 @@
 - name: Install Development Packages
   become: true
   apt:
-    name: [ "ninja-build", "python3-pip", "git","tig","jq","tmux", "pandoc"]
+    name: [ "ninja-build", "python3-pip", "git", "tig", "jq", "tmux", "pandoc"]
   tags:
     - install
     - core
 
-- name: Install xorg and Display Manager and Compositor
-  become: true
-  apt:
-    name: [ "xorg","lightdm", "compton", "dunst"]
-  tags:
-    - install
-    - core
-
-- name: Install WM awesome and utilities
-  become: true
-  apt:
-    name: [ "awesome", "lxappearance", "suckless-tools", "rofi", "j4-dmenu-desktop", "wmctrl", "xsel", "dunst", "libnotify-bin", "surfraw", "i3lock", "vlc", "gnome-mpv"]
-  tags:
-    - install
-    - core
-
-
-- name: Install Sound packages
-  become: true
-  apt:
-    name: [ "pulseaudio", "pavucontrol", "pulsemixer", "volumeicon-alsa"]
-  tags:
-    - install
-    - core
-
-- name: Install MPD packages
-  become: true
-  apt:
-    name: [ "mpd", "mpc", "ncmpcpp"]
-  tags:
-    - install
-    - core
-
-- name: Install Remote work packages
-  become: true
-  apt:
-    name: [ "openvpn", " remmina"]
-  tags:
-    - install
-    - core

@@ -1,0 +1,7 @@
+- name: Install MPD packages (mpd, mpc, ncmpcpp)
+  become: true
+  apt:
+    name: [ "mpd", "mpc", "ncmpcpp"]
+  tags:
+    - install
+    - core
