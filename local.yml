@@ -18,3 +18,4 @@
     - include: tasks/java.yml
     - include: tasks/awesomewm.yml
     - include: tasks/brave.yml
+    - include: tasks/google-chrome.yml
