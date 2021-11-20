@@ -16,10 +16,10 @@
     - neovim
     - core
 
-- name: Install System Packages 3 ()
+- name: Install System Packages 3 (curl,htop,lsof ,bat fzf,...)
   become: true
   apt:
-    name: [ "curl", "htop", "lsof", "silversearcher-ag", "bat", "python3-pip","wget", "file","locate", "net-tools", "task-spooler"]
+    name: [ "curl", "htop", "lsof", "silversearcher-ag", "bat", "python3-pip","wget", "file","locate", "net-tools", "task-spooler","fzf"]
   tags:
     - install
     - core
@@ -33,7 +33,7 @@
     - core
 
 
-- name: Install Development Packages
+- name: Install Development Packages (git, tig , pandoc,)
   become: true
   apt:
     name: [ "ninja-build", "python3-pip", "git", "tig", "jq", "tmux", "pandoc"]

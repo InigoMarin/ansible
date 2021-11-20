@@ -11,6 +11,7 @@
         state: present
   tasks:
     - include: tasks/core-setup.yml
+    - include: tasks/zsh-setup.yml
     - include: tasks/mpd.yaml
     - include: tasks/nvim-setup.yml
     - include: tasks/git-setup.yml
