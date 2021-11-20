@@ -6,7 +6,7 @@
     - install
     - core
 
-- name: Install WM awesome and utilities (awesome)
+- name: Install WM awesome and utilities (awesomewm)
   become: true
   apt:
     name: [ "awesome", "lxappearance", "suckless-tools", "rofi", "j4-dmenu-desktop", "wmctrl", "xsel", "libnotify-bin", "surfraw", "i3lock", "vlc", "gnome-mpv"]
