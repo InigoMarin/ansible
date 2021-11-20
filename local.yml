@@ -16,5 +16,5 @@
     - include: tasks/git-setup.yml
     - include: tasks/node-setup.yml
     - include: tasks/java.yml
-    - include: tasks/awesomewm.yaml
+    - include: tasks/awesomewm.yml
     - include: tasks/brave.yml
