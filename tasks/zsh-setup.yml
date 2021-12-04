@@ -4,6 +4,12 @@
     - install
     - zsh
 
+- name: Install FZF
+  apt: name=fzf
+  tags:
+    - install
+    - zsh
+
 - name: Check if .zshrc exists
   stat:
     path: ~/.zshrc
